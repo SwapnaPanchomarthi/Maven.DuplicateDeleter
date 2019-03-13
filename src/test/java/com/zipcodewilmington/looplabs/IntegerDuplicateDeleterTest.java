@@ -59,30 +59,6 @@ public class IntegerDuplicateDeleterTest {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @Test
     public void testRemoveDuplicates0() {
         Integer[] array = new Integer[]{0, 0, 0, 1, 1, 2, 3, 3, 3, 4, 4, 5, 5, 5, 5};
@@ -103,7 +79,7 @@ public class IntegerDuplicateDeleterTest {
     }
 
 
-    @Test
+        @Test
     public void testRemoveDuplicates2() {
         Integer[] array = new Integer[]{0, 0, 0, 1, 1, 2, 3, 3, 3, 4, 4, 5, 5, 5, 5};
         DuplicateDeleter<Integer> deleter = new IntegerDuplicateDeleter(array);
@@ -119,7 +95,8 @@ public class IntegerDuplicateDeleterTest {
         DuplicateDeleter<Integer> deleter = new IntegerDuplicateDeleter(array);
         Integer[] expected = new Integer[]{1,1,2,4,4};
         Integer[] actual = deleter.removeDuplicates(3);
-        TestUtils.assertArrayEquality(expected, actual);
+
+         TestUtils.assertArrayEquality(expected, actual);
     }
 
 
@@ -131,20 +108,6 @@ public class IntegerDuplicateDeleterTest {
         Integer[] actual = deleter.removeDuplicates(4);
         TestUtils.assertArrayEquality(expected, actual);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     @Test
     public void testRemoveDuplicatesExactlyIdempotence() {
